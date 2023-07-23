@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Application</title>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    
+    <div id="app">
+        <h3>{{ pageTitle }}</h3>
+        <p>{{ pageContent }}</p>
+    </div>
+
+</body>
+<!-- 
+Initialize Vue Object
+createApp is a Vue instance
+data is a selecting object
+ -->
+<script>
+    Vue.createApp({
+        data(){
+            return {
+                pageTitle:"Welcome to VueJS !",
+                pageContent: "Welcome to wonderful world of Vue !"
+            }
+        }
+    }).mount("#app");
+</script>
+</html>
